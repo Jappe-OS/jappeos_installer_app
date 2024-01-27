@@ -1,0 +1,29 @@
+name: jappeos_installer
+description: Installer app for JappeOS.
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.5 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  shade_ui:
+    git:
+      url: https://github.com/Jappe-OS/ShadeUI.git
+      ref: master-2.0
+
+  provider: ^6.0.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
