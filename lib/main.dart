@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ShadeApp(
+      debugShowCheckedModeBanner: false,
       customThemeProperties: ShadeCustomThemeProperties(ThemeMode.dark, null, false),
       home: const MyHomePage(),
     );
@@ -58,7 +59,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(currentPageTitle)),
+      appBar: ShadeHeaderBar(title: Text(currentPageTitle), isClosable: true, onClose: (p0) {}, isMaximizable: true, onMaximize: (p0) {}, isMinimizable: true, onMinimize: (p0) {}, isActive: true),
       body: Padding(
         padding: const EdgeInsets.all(BPPresets.medium),
         child: Column(
